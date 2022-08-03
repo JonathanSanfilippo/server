@@ -1,0 +1,38 @@
+/*colorpicker*/
+
+.picker-text{
+    
+    background-color:var(--search-bar); 
+    color:var(--color); 
+    opacity: 0.8;
+    font-size: 20px;
+    width: 100px; 
+    height:auto; 
+    text-transform: uppercase;  
+    margin-top: 100px;
+    margin-left: -25px;
+    position: absolute;
+    border:none;
+    padding: 10px;
+}
+
+
+.picker-color{
+   margin-top: 30px;
+  
+}
+
+input[type="color"]::-webkit-color-swatch {border: none;border-radius: 50%;}
+input[type="color" i] {cursor: pointer; border: none; background-color:transparent; width: 50px; height: 54px; margin-top: 0.5px;}
+::placeholder {
+  color: var(--color);
+  opacity: 0.5; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: var(--color);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: var(--color);
+}

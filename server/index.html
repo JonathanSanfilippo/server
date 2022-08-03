@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- Copyright (C) 2022 Jonathan Sanfilippo <jonathansanfilippo.uk@gmail.com> -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta http-equiv="refresh" content="30">-->
+        <title>Server v3.0</title>
+        <meta name="description" content="Personal Homepage." />
+        <link rel="icon" type="image/x-icon" href="img/icon.svg">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/calc.css">
+        <link rel="stylesheet" href="css/colorpicker.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+    <header class="header">
+            <input class="menu-btn" id="menu-btn" type="checkbox">
+           <label for="menu-btn" class="menu-icon">
+              <span class="nav-icon"></span>
+           </label>
+    
+            <a href="index.html" class="logo"> Server<span class="version"> v.3.0<span id="check"><span class="circle" style="color:grey"> <i class="fa-solid fa-circle"></i></span> </span></span></a>
+            <a href="" class="darkmode"></a>
+            
+            
+           <ul class="menu">
+            <li><a class="off#gmail" href="https://mail.google.com/"><i class="fa-duotone fa-envelope"></i> Gmail</a></li>
+            <li><a href="https://news.google.com/"><i class="fa-duotone fa-square-rss"></i> News</a> </li>
+                <li><a href="https://maps.google.com/"><i class="fa-duotone fa-location-check"></i> Maps</a></li>
+                    <li><a href="https://contacts.google.com/"><i class="fa-duotone fa-address-book"></i> Contacts</a></li>
+                        <li><a href="https://translate.google.com/"><i class="fa-duotone fa-language"></i> Translate</a></li>
+                            <li><a href="https://drive.google.com/drive/my-drive"><i class="fa-brands fa-google-drive"></i> Driver</a></li>
+                                <li><a href="https://calendar.google.com/"><i class="fa-duotone fa-calendar-days"></i> Calendar</a></li>
+                                    <li><a href="https://photos.google.com/"><i class="fa-solid fa-aperture"></i> Photos</a></li>
+                                    <li><a href="../bin/test.sh"><i class="fa-solid fa-aperture"></i> Test</a></li>
+                                   
+    </header>
+    <div class="vertical-menu">
+      <div class="vertical-menu">
+        <a href="#" onclick = "homeOpen();noteClose();terzoClose();quartoClose();"></a>
+        <a href="#" onclick = "noteOpen(); homeClose();terzoClose();quartoClose();"></a>
+        <a href="#" onclick = "terzoOpen(); homeClose();noteClose();quartoClose();"></a>
+        <a href="#" onclick = "quartoOpen(); homeClose();noteClose();terzoClose();"><i class="fa-duotone fa-eye-dropper-full"></i></a>
+      </div>
+    </div>
+
+
+
+<div class="quarto-close" id="quarto">
+     <div class="container">
+          <div class="row top">
+              <div class="column-1 title">
+                   <span id="colorful">
+                    <h1>Colorpicker</h1>
+                    <p>Select a color with Colorpicker tool.</p>
+                  </span>
+                   <div class="picker-color">
+                        <input class="picker-text" type="text" id="color" placeholder="#57B6FF">
+                        <input type="color" id="colorpicker" value="#57B6FF">
+                   </div>
+                   
+              </div>
+          </div>
+     </div>
+</div>
+
+
+<div class="terzo-close" id="terzo">
+    <div class="container">
+      <div class="row top">
+           <div class="column-1 title">
+             <h1>Calculator</h1>
+             <div id="calcolatrice">
+              <form name="form">
+                <input class="area" name="area" value="" placeholder="0">
+                <table id="calc">
+                  <tr>
+                    <td><input class="cancella" type="button" value="C" onclick="reset()"></td>
+                    <td><input type="button" value="<" onclick="cancella();"></td>
+                    <td><input type="button" value="/" onclick="dig('/');"></td>
+                    <td><input type="button" value="x" onclick="dig('*');"></td>
+                  </tr>       
+                  <tr>
+                    <td><input type="button" value="7" onclick="dig(7);"></td>
+                    <td><input type="button" value="8" onclick="dig(8);"></td>
+                    <td><input type="button" value="9" onclick="dig(9);"></td>
+                    <td><input type="button" value="-" onclick="dig('-');"></td>
+                  </tr>      
+                  <tr>
+                    <td><input type="button" value="4" onclick="dig(4);"></td>
+                    <td><input type="button" value="5" onclick="dig(5);"></td>
+                    <td><input type="button" value="6" onclick="dig(6);"></td>
+                    <td><input type="button" value="+" onclick="dig('+');"></td>
+                  </tr>      
+                  <tr>
+                    <td><input type="button" value="1" onclick="dig(1);"></td>
+                    <td><input type="button" value="2" onclick="dig(2);"></td>
+                    <td><input type="button" value="3" onclick="dig(3);"></td>
+                    <td rowspan="2" ><input style="height: 170px;" type="button" value="=" onclick="somma();"></td>
+                  </tr>  
+                  <tr>
+                    <td><input type="button" value="0" onclick="dig(0);" ></td>
+                    <td><input type="button" value="00" onclick="dig('00');"></td>
+                    <td><input type="button" value=","onclick="dig('.');"></td>
+                    
+                  </tr>  
+                </table>
+              </form>
+            </div>
+           </div>
+      </div>
+</div>   
+
+
+
+
+ </div>
+
+
+<div id="notes" class="notes-close">
+    <div class="container">
+         <div class="row top">
+              <div class="column-1 title">
+                <h1>Quick Notes</h1>
+                <p>Add a note, double click to delete.</p>
+              <div id="app">
+                <button class="add-note" type="button" >+</button>
+             </div>
+              </div>
+         </div>
+           
+    </div>
+</div>
+
+
+    <div class="home-open" id="home">
+    <div class="container">
+            <div class="row top">
+                 <div class="column-1 title">
+                      <div class="datatime">
+                        <span class="weather-icon"></span>
+                        <p id="time"></p>
+                        <p id="data"></p>
+                        <span class="temperature-value"><span></span></span>
+                        <span class="temperature-description"><span></span></span>
+                        <span class="location"><span></span></span>
+                        <br>
+                        <div id="adv"><span class="notification"></span></div>
+                      </div>
+                 </div>
+            </div>
+
+
+
+           <div class="row">
+               <div class="column-1">
+                 <div class="footernavs">
+                    <ul class="wrapper">
+                        <li class="icon apple">
+                       <span class="tooltip">Apple</span>
+                       <span> <a href="https://www.apple.com/"><i class="fa-brands fa-apple"></i></a></span>
+                     </li>
+                     <li class="icon facebook">
+                       <span class="tooltip">Facebook</span>
+                       <span> <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></span>
+                     </li>
+                     <li class="icon twitter">
+                       <span class="tooltip">Twitter</span>
+                       <span><a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a></span>
+                     </li>
+                     <li class="icon instagram">
+                       <span class="tooltip">Instagram</span>
+                       <span><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></span>
+                     </li>
+                     <li class="icon github">
+                       <span class="tooltip">Github</span>
+                       <span><a href="https://github.com/"><i class="fab fa-github"></i></a></span>
+                     </li>
+                     <li class="icon youtube">
+                       <span class="tooltip">Youtube</span>
+                       <span><a href="https://www.youtube.com/"><i class="fa-solid fa-circle-play"></i></a></span>
+                     </li>
+                     <li class="icon netflix">
+                       <span class="tooltip">Netflix</span>
+                       <span> <a href="https://www.netflix.com/browse"><i class="fa-duotone fa-clapperboard-play"></i></a></span>
+                     </li>
+                     <li class="icon tv8">
+                       <span class="tooltip">TV8</span>
+                       <span><a href="https://tv8.it/streaming.html"><i class="fa-duotone fa-circle-8"></i></a></span>
+                     </li>
+                     <li class="icon teams">
+                       <span class="tooltip">Teams</span>
+                       <span> <a href="https://www.microsoft.com/en-ww/microsoft-teams/log-in"><i class="fa-duotone fa-user"></i></a></span>
+                     </li>
+                       <li class="icon linkedin">
+                       <span class="tooltip">Linkedin</span>
+                       <span> <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></span>
+                     </li>
+                      <li class="icon amazon">
+                       <span class="tooltip">amazon</span>
+                       <span> <a href="https://www.amazon.co.uk/"><i class="fa-brands fa-amazon"></i></a></span>
+                     </li>
+                   </ul>
+                 </div>
+                 
+                 <div class="form">
+                    <form action="https://www.google.com/search" method="get" class="search-bar">
+                    <input type="text" placeholder="Search" name="q">
+                    <button type="submit"><img src="img/search.svg"></button>
+                    </form>
+                 </div>
+                 
+                </div>
+           </div>
+    </div>
+  </div>
+
+        <div class="footer-container"></div>
+<footer>
+   <div class="row">
+        <div class="column-1 ft-legal">
+               
+               <div class="logo-leone">
+                <img src="/img/leone-logo.png" width="100px" alt="">
+               
+              </div>
+        </div>
+   </div>
+ 
+
+  
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    
+    <ul class="ft-legal-list">
+      <li><a href="#" class="v"><span id="browser" title="browser version"></span></a></li>
+      <li><a href="#" id="rete"></a></li>
+      <li><a href="#" class="">&nbsp;&nbsp;<span id="vpn"></span><span id="ip"></span></a></li>
+      <li><a href="#"><span id="country"></span></a></li>
+      <li><a href="#"><span id="isp"></span></a></li>
+      <li>&copy; 2022 Copyright Jonathan Sanfilippo.</li>
+    </ul>
+  </section>
+</footer>
+
+    <script src="lib/darkmode.js"></script>
+    <script src="lib/notes.js"></script>
+    <script src="lib/useragent.js"></script>
+    <script src="lib/online.js"></script>
+    <script src="lib/myip.js"></script>
+    <script src="lib/versione_browser.js"></script>
+    <script src="lib/data.js"></script>
+    <script src="lib/weather.js"></script>
+    <script src="lib/pages.js"></script>
+    <script src="lib/calc.js"></script>
+    <script src="lib/colorpicker.js"></script>
+    
+    </body>
+</html>
